@@ -1,4 +1,4 @@
-name: CI (Integração continua): Main Worflow
+name: CI (Integração continua) Main Worflow
 
 on:
   pull_request:
