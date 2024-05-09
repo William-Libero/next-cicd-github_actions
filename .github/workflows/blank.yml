@@ -4,7 +4,7 @@ on:
   push:
     branches: ["main"]
   pull_request:
-    branches: ["main"]
+    types: ["opened", "synchronize"]
 
 jobs:
   exemplo:
@@ -15,3 +15,6 @@ jobs:
 
       - name: Run a one-line script
         run: echo Hello, world!
+
+      - name: Run a list files script
+        run: ls -la
