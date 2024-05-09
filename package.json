@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "build1": "rm -rf build && next build && next export && mv out build",
+    "build": "rm -rf build && next build && next export && mv out build",
     "start": "next start",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
