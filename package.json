@@ -1,5 +1,6 @@
 {
   "name": "next-github-actions",
+  "type": "module",
   "version": "1.0.0",
   "description": "- ...",
   "main": "index.js",
@@ -9,7 +10,8 @@
     "start": "next start",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
-    "deploy:prod": "yarn build && vercel ./build --confirm --no-clipboard --token=$VERCEL_TOKEN --prod",
+    "deploy:prod": "yarn deploy:staging --prod",
+    "deploy:staging": "yarn build && vercel ./build --confirm --no-clipboard --token=$VERCEL_TOKEN",
     "deploy:preview": "node ./scripts/pullRequestPreview"
   },
   "repository": {
