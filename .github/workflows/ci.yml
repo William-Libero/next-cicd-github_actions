@@ -16,10 +16,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-
       - name: Install dependencies
         run: yarn install
-
       - name: Run linter
         run: yarn lint
 
@@ -31,3 +29,16 @@ jobs:
         run: yarn install
       - name: Run preview deployment
         run: yarn deploy:preview
+
+  test_e2e:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Cypress
+        uses: cypress-io/github-action@v4
+        with:
+          browser: chrome
+      - name: Install dependencies
+        run: yarn install
+      - name: Run tests
+        run: yarn test:e2e
