@@ -2,7 +2,7 @@ export default function HomeScreen() {
   return (
     <div>
       <h1>Home</h1>
-      <p>Nova alteração</p>
+      <p>Cypress e2e tests</p>
     </div>
   );
 }
