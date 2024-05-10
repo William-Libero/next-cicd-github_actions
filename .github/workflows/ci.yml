@@ -38,7 +38,3 @@ jobs:
         uses: cypress-io/github-action@v4
         with:
           browser: chrome
-      - name: Install dependencies
-        run: yarn install
-      - name: Run tests
-        run: yarn test:e2e
